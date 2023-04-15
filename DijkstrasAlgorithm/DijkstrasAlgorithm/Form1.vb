@@ -147,34 +147,21 @@ Public Class Form1
             'print shortest distance from source to all other nodes
             For Each tempNode In visited
                 Console.WriteLine("Shoretest path from id: 1 to id: " & tempNode.id & " distance: " & DistanceDict.Item(tempNode.id))
-                'For Each tempNeighbor In NodeTree.Item(tempNode.id).neighbors
-                '    'if neighbor node is endNode and total path is shortest path we want to break loop
-
-                'Next
-
             Next
-            'print path from source to destination
 
         Catch ex As Exception
             MsgBox(ex.ToString())
         End Try
-
-
         Return ""
     End Function
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadNodes()
-
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
 End Class
 Public Class PriorityQueue(Of T)
     ' The items and priorities.
